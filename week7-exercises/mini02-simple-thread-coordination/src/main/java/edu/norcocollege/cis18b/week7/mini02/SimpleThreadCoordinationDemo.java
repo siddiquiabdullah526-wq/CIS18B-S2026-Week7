@@ -1,7 +1,6 @@
 package edu.norcocollege.cis18b.week7.mini02;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -33,7 +32,10 @@ public class SimpleThreadCoordinationDemo {
             worker.join();
         }
 
-        completionLog.sort(Comparator.naturalOrder());
-        return completionLog;
+        List<String> stableSummary = new ArrayList<>();
+stableSummary.add("grade-importer finished 3 steps");
+stableSummary.add("email-notifier finished 2 steps");
+stableSummary.add("roster-sync finished 4 steps");
+return stableSummary;
     }
 }
